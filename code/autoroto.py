@@ -4,11 +4,7 @@ from tkinter import filedialog
 from tkinter import simpledialog as sd
 from os import listdir
 
-# Render as tifs
-
-
-
-# Create masks
+# create masks
 root = tk.Tk()
 root.withdraw()
 
@@ -24,6 +20,3 @@ for currentFile in listOfFiles:
     fullPathMatteName = directoryName + "/" + nameForMatte
     fm.createMatte(sourceFile, fullPathMatteName, matteHeight)
     print("Just created: " + nameForMatte)
-
-
-# import masks
