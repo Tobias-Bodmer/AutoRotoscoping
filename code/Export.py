@@ -1,10 +1,11 @@
 # render as tifs
+from python_get_resolve import GetResolve
 import os
 from tkinter import filedialog
 import tkinter as tk
 command = "cmd"
 
-resolve = app.GetResolve()
+resolve = GetResolve()
 pm = resolve.GetProjectManager()
 proj = pm.GetCurrentProject() 
 

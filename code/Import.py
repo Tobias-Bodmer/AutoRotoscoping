@@ -1,9 +1,10 @@
 # import masks
+from python_get_resolve import GetResolve
 from tkinter import filedialog
 import tkinter as tk
 import time
 
-resolve = app.GetResolve()
+resolve = GetResolve()
 pm = resolve.GetProjectManager()
 proj = pm.GetCurrentProject()
 ms = resolve.GetMediaStorage()
