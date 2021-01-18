@@ -3,7 +3,7 @@ from python_get_resolve import GetResolve
 import os
 from tkinter import filedialog
 import tkinter as tk
-command = "cmd"
+command = "cmd /k py C:/tmp/autoroto.py"
 
 resolve = GetResolve()
 pm = resolve.GetProjectManager()
