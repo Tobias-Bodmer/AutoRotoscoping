@@ -16,7 +16,7 @@ def myexport(format, codec):
     root = tk.Tk()
     root.withdraw()
 
-    directoryName = filedialog.askdirectory(parent=root, initialdir="/", title = 'Please select a directory')
+    directoryName = filedialog.askdirectory(parent=root, initialdir="/", title = 'Please select a directory for exporting(use an empty folder).')
 
     proj.SetRenderSettings({"TargetDir": directoryName})
 

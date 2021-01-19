@@ -9,7 +9,7 @@ from os import listdir
 root = tk.Tk()
 root.withdraw()
 
-directoryName = filedialog.askdirectory(parent=root, initialdir="/", title = 'Please select a directory')
+directoryName = filedialog.askdirectory(parent=root, initialdir="/", title = 'Please select the directory where the tiffs are.')
 matteHeight = sd.askinteger("Set the matte size", "Output matte vertical resolution (256 recommended for quick tests)?", parent=root,initialvalue=256)
 
 listOfFiles = listdir(directoryName)

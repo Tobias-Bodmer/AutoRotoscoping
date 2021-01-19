@@ -24,7 +24,7 @@ def myimport(timelinename, window):
 
 def myimport_matte():
     resolve.OpenPage("edit")
-    directoryName = filedialog.askopenfilename(parent=root, initialdir="/", title = 'Please select matte')
+    directoryName = filedialog.askopenfilename(parent=root, initialdir="/", title = 'Please select matte.')
 
     tl = proj.GetCurrentTimeline()
 
@@ -39,7 +39,7 @@ def myexport(format, codec):
 
     proj.DeleteAllRenderJobs()
 
-    directoryName = filedialog.askdirectory(parent=root, initialdir="/", title = 'Please select a directory for export')   
+    directoryName = filedialog.askdirectory(parent=root, initialdir="/", title = 'Please select a directory for exporting.')   
 
     proj.SetRenderSettings({"TargetDir": directoryName})
 
@@ -54,15 +54,16 @@ def myexport(format, codec):
         pass
 
 #load tifs
-myimport("PreparingProject", "Please select tiff")
+myimport("PreparingProject", "Please select the first matte tiff.")
 #export mov
 myexport("mp4", "H264")
 
 pm.CreateProject("RotoscopeProject")
 proj = pm.GetCurrentProject()
+mp = proj.GetMediaPool()
 
 #load video for rotoscope
-myimport("Final-Rotoscope", "Please select a video for matting")
+myimport("Final-Rotoscope", "Please select the video you want to matte.")
 
 #load matte from mp4
 myimport_matte()
